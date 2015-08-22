@@ -37,7 +37,7 @@ L-SB80M9FFT4-M:proxy-server sqazi$ bode index.js
 
 ## Features
 
-### Echo Server:
+### Echo Server: Port 8000
 
 ```bash
 curl -v -X POST http://127.0.0.1:8000 -d "hello self" -H "x-asdf: yodawg"
@@ -69,15 +69,13 @@ L-SB80M9FFT4-M:proxy-server sqazi$ curl -v -X POST http://127.0.0.1:8lo self" -H
 hello self
 ```
 
-### Proxy Server:
+### Proxy Server: Port 8001
 
-Echo Server: Port 8000
-Proxy Server: Port 8001
 Port 8001 will proxy to the echo server on port 8000.
-
+```bash
 Echo request: 
 {"host":"127.0.0.1:8000","user-agent":"curl/7.43.0","accept":"*/*","x-asdf":"yodawg","content-length":"10","content-type":"application/x-www-form-urlencoded"}hello self
-
+```
 ### Configuration:
 
 #### CLI Arguments:
