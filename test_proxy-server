@@ -1,0 +1,35 @@
+cd
+ls
+cat package.json
+cat index.js
+clear
+
+bode index.js
+npm start
+bodemon index.js
+
+// Echo server = 8000
+curl http://127.0.0.1:8000
+// verify echoserver is working:
+curl -X POST http://127.0.0.1:8000 -d "hello self"
+curl -v -X POST http://127.0.0.1:8000 -d "hello self" -H "x-asdf: yodawg"
+
+// Proxy server = 8001
+// Verify the proxy server at http://127.0.0.1:8001
+// operates exactly the same as the echo server at http://127.0.0.1:8000:
+curl -v http://127.0.0.1:8001 -d "hello proxy"
+curl -v http://127.0.0.1:8001/asdf -d "hello proxy"
+curl -v http://127.0.0.1:8001 -d "hello self"
+curl -v http://127.0.0.1:8001 -d "hello self" -H "x-asdf: yodawg"
+
+
+
+// --host
+
+// --port
+
+// --log
+bodemon index.js --log=~/proxy-serverLogFile.log
+
+// --url
+curl -v http://127.0.0.1:8001 -d "hello self" -H "x-destination-url: http://www.google.com"

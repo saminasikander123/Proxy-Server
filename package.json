@@ -1,0 +1,16 @@
+{
+  "name": "firstproxy-server",
+  "version": "1.0.0",
+  "description": "First proxy-server for Node.js Class August 21 2015",
+  "main": "index.js",
+  "scripts": {
+    "test": "test firstproxy-server",
+    "start": "bode /Users/sqazi/proxy-server/index.js"
+  },
+  "author": "Samina Qazi",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.61.0",
+    "yargs": "^3.21.0"
+  }
+}
